@@ -49,7 +49,7 @@ let difficulty =
 
 // set difficulty select value
 difficultySelect.value = difficulty;
-// Generate random word from arraay
+// Generate random word from array
 function getRandomWord() {
   return words[Math.floor(Math.random() * words.length)];
 }

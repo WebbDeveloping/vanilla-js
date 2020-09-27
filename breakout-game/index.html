@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bouncing-ball.css" />
+    <title>Breakout!</title>
+  </head>
+  <body>
+    <!-- //CANVAS// -->
+    <div>
+      <canvas id="canvas" width="800" height="600"></canvas>
+      <div id="back-arrow" class="back-arrow">&larr; Back</div>
+    </div>
+    <!-- //CAANVAAS// -->
+    <!-- container for final message  -->
+    <div class="popup-container" id="popup-container">
+      <div id="rules" class="rules lc">
+        <!-- <button id="close-btn" class="btn rules-btn">X</button> -->
+        <div class="profile">
+          <div class="profile-title">
+            <img src="" alt="" id="profile-img" class="profile-img" />
+            <div class="username-rank">
+              <h2 id="username"></h2>
+              <div class="rank">Pro</div>
+            </div>
+          </div>
+          <div class="linee"></div>
+          <div class="flex-end">
+            <div class="settings-field">
+              <i class="fas fa-award fa-2x"></i>
+              <label>High Score:</label>
+              <h2 id="highscore"></h2>
+            </div>
+            <div class="settings-field">
+              <i class="fa fa-pie-chart fa-2x"></i>
+              <label>Stats:</label>
+              <div class="rarr">
+                &rarr;
+              </div>
+            </div>
+            <div class="settings-field">
+              <i class="fas fa-trophy fa-2x"></i>
+              <label>Leaderboard:</label>
+              <div class="rarr">
+                &rarr;
+              </div>
+            </div>
+            <div class="awards-field">
+              <label>Awards:</label>
+              <div class="award-container" id="award-container">
+                <img
+                  class="award"
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.redditstatic.com%2Fgold%2Fawards%2Ficon%2Fplatinum_512.png&f=1&nofb=1"
+                  alt=""
+                />
+
+                <img
+                  class="award"
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.redditstatic.com%2Fgold%2Fawards%2Ficon%2Fgold_512.png&f=1&nofb=11"
+                  alt=""
+                />
+
+                <img
+                  class="award"
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.redditstatic.com%2Fgold%2Fawards%2Ficon%2Fplatinum_512.png&f=1&nofb=1"
+                  alt=""
+                />
+
+                <img
+                  class="award"
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.redditstatic.com%2Fgold%2Fawards%2Ficon%2Fgold_512.png&f=1&nofb=11"
+                  alt=""
+                />
+
+                <img
+                  class="award"
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.redditstatic.com%2Fgold%2Fawards%2Ficon%2Fplatinum_512.png&f=1&nofb=1"
+                  alt=""
+                />
+
+                <img
+                  class="award"
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.redditstatic.com%2Fgold%2Fawards%2Ficon%2Fgold_512.png&f=1&nofb=11"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="settings-field">
+              <i class="fas fa-cog fa-2x"></i>
+              <label>Settings:</label>
+              <div class="rarr">
+                &rarr;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup">
+        <div class="title">
+          <h4>Designed by Joe Dirt</h4>
+          <h2 id="final-message" class="intro-title">Breakout</h2>
+          <h3 id="final-message-reveal-word">Built with Vanilla.js</h3>
+        </div>
+        <div id="ball-body" class="ball-body">
+          <div class="ball-animation">
+            <div class="ball-decoration"></div>
+          </div>
+        </div>
+        <div class="button-group">
+          <button id="new-game">New Game</button>
+          <button id="play-online">Play Online</button>
+          <button id="profile">Profile</button>
+        </div>
+      </div>
+      <div id="rules" class="rules rc">
+        <!-- <button id="close-btn" class="btn rules-btn">X</button> -->
+        <div class="profile">
+          <div class="profile-title">
+            <!-- <img src="" alt="" id="profile-img" class="profile-img" /> -->
+            <!-- <div class="username-rank">
+                      <h2 id="username"></h2>
+                      <div class="rank">Pro</div>
+                    </div> -->
+          </div>
+          <div class="linee"></div>
+          <div class="settings-field">
+            <i class="fas fa-award fa-2x"></i>
+            <label>High Score:</label>
+            <h2 id="highscore"></h2>
+          </div>
+          <div class="settings-field">
+            <i class="fa fa-pie-chart fa-2x"></i>
+            <label>Stats:</label>
+          </div>
+          <div class="settings-field">
+            <i class="fas fa-trophy fa-2x"></i>
+            <label>Leaderboard:</label>
+          </div>
+          <div class="settings-field">
+            <i class="fas fa-cog fa-2x"></i>
+            <label>Settings:</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

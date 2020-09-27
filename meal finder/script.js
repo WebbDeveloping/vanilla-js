@@ -38,7 +38,7 @@ searchMeal = e => {
             .join('');
         }
       });
-    //   cleaar search text
+    //   clear search text
     search.value = '';
   } else {
     showNotification('Please Enter a search value');
